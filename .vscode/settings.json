@@ -1,0 +1,87 @@
+{
+	// 字体大小
+	"editor.fontSize": 18,
+	// 终端字体大小
+	"terminal.integrated.fontSize": 16,
+	// code snippet
+	"editor.suggestSelection": "recentlyUsedByPrefix",
+	"editor.autoClosingBrackets": "always",
+	// snippets代码优先显示补全
+	"editor.snippetSuggestions": "top",
+	//在读取和写入文件时使用的默认字符集编码。可以按语言对此项进行配置
+	"files.encoding": "utf8",
+	//控制是否检测 "$LANG" 环境变量并将其设置为符合 UTF-8 的选项，因为 VS Code 的终端仅支持来自 shell 的 UTF-8 编码数据
+	"terminal.integrated.detectLocale": "off",
+	// tab变为空格
+	"editor.insertSpaces": true,
+	// 缩进尺寸
+	"editor.tabSize": 4,
+	// 设置光标类型
+	"editor.cursorStyle": "block",
+	"editor.cursorBlinking": "blink",
+	"workbench.colorCustomizations": {
+		"editorCursor.foreground": "#ffffff"
+	},
+	// vim按键冲突配置
+	"vim.handleKeys": {
+		"<C-d>": true,
+		"<C-s>": true,
+		"<C-z>": false,
+		"<C-a>": false,
+		"<C-j>": false,
+		"<C-x>": false,
+		"<C-w>": false
+	},
+	// 字符长度折行
+	// "editor.wordWrap": "wordWrapColumn",
+	// "editor.wordWrapColumn": 100,
+	// 函数参数提示
+	"editor.inlayHints.enabled": "off",
+	// 代码提示时间
+	"editor.hover.delay": 300,
+	// 增加宽度尺标
+	"editor.rulers": [
+		// {
+		// 	"column": 80,
+		// 	"color": "#4000ff"
+		// },
+		{
+			"column": 100,
+			"color": "#ff0000"
+		},
+		// {
+		// 	"column": 120,
+		// 	"color": "#ff0000"
+		// },
+	],
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8",
+		"editor.formatOnSave": true
+	},
+	// 调整语言服务器模式
+	"python.analysis.languageServerMode": "light",
+	// 只分析打开的文件，而不是整个工作区
+	"python.analysis.diagnosticMode": "openFilesOnly",
+	// 关闭工作区及第三方库的索引，提升启动速度
+	// "python.analysis.indexing": false,
+	// 明确排除不需要分析的大型目录（数据、索引、结果、笔记、虚拟环境）
+	"python.analysis.exclude": [
+		"**/data/**",
+		"**/index_store/**",
+		"**/results/**",
+		"**/docs/**",
+		"**/.venv/**"
+	],
+	// 让 "from src.xxx import ..." 在编辑器中正确解析（与脚本内的 sys.path 注入一致）
+	"python.analysis.extraPaths": [
+		"${workspaceFolder}"
+	],
+	// 解释器由当前机器的环境选择（命令面板：Python: Select Interpreter），不写死绝对路径
+	"python.languageServer": "Pylance",
+	"python.terminal.activateEnvironment": true,
+	"python-envs.defaultEnvManager": "ms-python.python:conda",
+	"python-envs.defaultPackageManager": "ms-python.python:conda",
+	"autopep8.args": [
+		"--max-line-length=100"
+	]
+}

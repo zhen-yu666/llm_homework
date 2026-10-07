@@ -1,0 +1,34 @@
+# === 项目配置 ===
+# .vscode：只提交可移植的工作区配置（随 git 同步到 Ubuntu），忽略个人缓存等其余内容
+docs/
+CLAUDE.md
+.claude/
+
+# === Python ===
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+
+# === 本地配置文件（仅本机使用，不提交到仓库） ===
+# 以 .local 结尾的本地配置，例如 CLAUDE.local.md、settings.local.json 等
+*.local
+*.local.md
+*.local.json
+
+# === 虚拟环境与前端依赖 ===
+.venv/
+node_modules/
+
+# === 本地环境变量 ===
+.env
+
+# === 工具缓存目录 ===
+.pytest_cache/
+.mypy_cache/
+# PyCharm 元数据（已迁移 VS Code，不再提交）
+.idea/
+
+# === 系统文件 ===
+Thumbs.db
+.DS_Store

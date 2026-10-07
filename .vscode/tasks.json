@@ -1,0 +1,85 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "依赖：检查导入",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-c",
+				"import langchain, faiss, pandas, matplotlib, tqdm; print('依赖检查通过')"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "依赖：安装 requirements.txt",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"pip",
+				"install",
+				"-r",
+				"requirements.txt"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "T1：构建索引",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"scripts/run_t1.py",
+				"--build-index"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "T7：快速评估（跳过 LLM 生成指标）",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"scripts/run_t7.py",
+				"--skip-gen-eval"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "T8-1：幻觉治理对比",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"scripts/run_t8_1.py"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "全部实验：run_all.sh --fast",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"run_all.sh",
+				"--fast"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		}
+	]
+}

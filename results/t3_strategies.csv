@@ -1,0 +1,6 @@
+﻿strategy,recall@5
+baseline,0.56
+rewrite,0.64
+multi_query,0.64
+sub_query,0.72
+mq+dense+sparse,0.6
