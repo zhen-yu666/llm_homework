@@ -1,6 +1,6 @@
 # RAG 课程实践作业
 
-云南大学软件学院《大规模语言模型：从理论到实践》第 9 章检索增强生成实践作业。
+《大规模语言模型：从理论到实践》 检索增强生成实践作业。
 
 ## 一、任务与分工
 
@@ -13,23 +13,29 @@
 
 ### 环境要求
 
-- Python 3.10+
-- 无需 GPU，CPU 可运行
-- 本地 LLM 推荐 Ollama；也可用在线 API
+- 运行具体查看 `requirements.txt` 文件
 
-### 安装依赖
+### 复现步骤
 
 ```bash
-pip install -r requirements.txt
+# 配置conda环境
+conda activate <环境名>
+python --version
+which python
+python -m pip --version
+
+# 创建.env并填入key，这里实验默认是阿里云百炼的API
+cp .env.example .env
+code .env
+
+# 安装依赖
+python -m pip install -r requirements.txt
+python -c "import langchain, faiss, pandas, matplotlib, tqdm; print('依赖检查通过')"
+
+# 安装并检查中文字体
+fc-match "Noto Sans CJK SC"
 ```
 
-### 启动本地 LLM（可选，推荐）
-
-```bash
-# 安装 Ollama 后
-ollama pull qwen2.5:7b
-ollama serve
-```
 
 ### 配置环境变量
 
