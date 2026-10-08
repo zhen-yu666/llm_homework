@@ -1,6 +1,6 @@
 ﻿variant,recall@3,avg_context_tokens,avg_latency_s
-top3_direct,0.48,459.52,0.22240000000000001
-top5_rule_top3,0.48,459.52,0.2076
-top5_crossencoder_top3,0.4,528.84,20.7704
-top5_llmjudge_top3,0.48,483.4,1.9504
-top5_crossencoder_compress,0.4,162.36,17.4956
+top3_direct,0.48,459.52,0.19
+top5_rule_top3,0.48,459.52,0.17120000000000002
+top5_crossencoder_top3,0.4,528.84,12.803600000000001
+top5_llmjudge_top3,0.44,464.52,1.954
+top5_crossencoder_compress,0.4,172.44,13.274000000000001
