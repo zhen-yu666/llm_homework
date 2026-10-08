@@ -1,8 +1,9 @@
 # === 项目配置 ===
 # .vscode：只提交可移植的工作区配置（随 git 同步到 Ubuntu），忽略个人缓存等其余内容
-# docs/
+docs/
 CLAUDE.md
 .claude/
+command/
 
 # === Python ===
 __pycache__/
