@@ -46,6 +46,21 @@ results/            实验结果（CSV/JSON/PNG）
 Ctrl+Shift+P → Tasks: Run Task（或菜单 终端 → 运行任务）→ 选任务
 ```
 
+| 顺序 | 任务                              | 主要产出                                           |
+| :--- | --------------------------------- | -------------------------------------------------- |
+| 1    | 复现：检查导入                    | 无                                                 |
+| 2    | 复现：仅构建 header 索引          | `index_store/faiss_index/`                         |
+| 3    | 复现：T1 基线（建索引）           | `t1_baseline.jsonl、t1_bare_llm.jsonl`             |
+| 4    | 复现：T2 分块（跳过LLM评分）      | `t2_grid.csv、t2_recall5.png`                      |
+| 5    | 复现：T3 查询优化与 RRF           | `t3_strategies.csv、t3_rrf_alpha.csv/.png`         |
+| 6    | 复现：T4 检索器对比               | `t4_retrievers.csv、t4_cases.jsonl、t4_recall.png` |
+| 7    | 复现：T5 重排压缩（跳过答案生成） | `t5_summary.csv、各变体 jsonl `                    |
+| 8    | 复现：T7 检索快速检查             | `t7_*.csv、t7_layered.png`                         |
+| 9    | 复现：T7 统评估（完整）           | `t7_*.csv、t7_layered.png`                         |
+| 10   | 复现：T8-1 幻觉治理               | `t8_1_*.csv/.jsonl`                                |
+
+- 对于T5需要下载`BAAI/beg-reranker-base`
+
 ## 四、模块与课件章节对应
 
 | 模块 | 文件 | 对应课件 |
