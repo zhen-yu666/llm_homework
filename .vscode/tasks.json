@@ -15,7 +15,7 @@
             "command": "python",
             "args": [
                 "-c",
-                "import langchain, faiss, pandas, matplotlib, tqdm; print('imports ok')"
+                "import langchain, faiss, pandas, matplotlib, tqdm; print(\"imports ok\")"
             ],
             "options": {"cwd": "${workspaceFolder}"},
             "problemMatcher": []
@@ -26,7 +26,7 @@
             "command": "python",
             "args": [
                 "-c",
-                "from src.index import build_index; build_index(strategy='header')"
+                "from src.index import build_index; build_index(strategy=\"header\")"
             ],
             "options": {"cwd": "${workspaceFolder}"},
             "problemMatcher": []
